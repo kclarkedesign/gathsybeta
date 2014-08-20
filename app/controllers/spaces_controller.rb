@@ -30,6 +30,9 @@ class SpacesController < ApplicationController
   end
 
    def edit
+     @space = Space.find_by_id(params[:space_id])
+     redirect_to(:back) unless @Space.user_id == current_user.id
+     render :edit
    end
 
   def new
@@ -39,7 +42,7 @@ class SpacesController < ApplicationController
   def update
    @space = Space.find_by_id(params[:id])
      @space.update(params)
-    #redirect_to(:back)
+    redirect_to(:back)
   end
 
   def create

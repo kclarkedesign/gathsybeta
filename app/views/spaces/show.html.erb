@@ -143,12 +143,15 @@
        
       }
 
+
       function styleButton(){
+        setTimeout(function(){
           $(':submit').css({width:'100%'});
           $(':submit').addClass('button');
           $(':submit').addClass('blue');
           $(':submit').css({height:'50px'})
           $(':submit').css({cursor:'pointer'})
+        },500)
       }
       function go(){
 

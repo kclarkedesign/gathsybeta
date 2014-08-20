@@ -61,4 +61,10 @@ class SpacesController < ApplicationController
     end
   end
 
+   def destroy
+     @space = Space.find_by_id(params[:id])
+     @space.destroy
+    end
+  end
+
 end

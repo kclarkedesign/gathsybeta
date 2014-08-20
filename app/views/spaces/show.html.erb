@@ -104,6 +104,27 @@
     </select>
     </div>
 
+    <input type="hidden" name="booking[space_id]" value="<%= @space.id %>">
+    <div  id="myCart"></div>
+    <!--<button type="submit" class="blue button" id="space-show-sidebar-book-button">Book it</button>-->
+
+
+    <script>
+        // initialize input widgets first
+        $('.time').timepicker({
+            'showDuration': true,
+            'timeFormat': 'g:ia'
+        });
+
+        $('.date').datepicker({
+            'format': 'yyyy-m-d',
+            'autoclose': true
+        });
+
+        // initialize datepair
+        $('#datepairExample').datepair();
+    </script>
+
 
     <input type="hidden" name="booking[space_id]" value="<%= @space.id %>">
     <div  id="myCart"></div>

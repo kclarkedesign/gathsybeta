@@ -70,6 +70,8 @@
         $('.time').timepicker({
             'showDuration': true,
             'timeFormat': 'g:ia',
+            'step': 60
+
         });
 
         $('.date').datepicker({
@@ -298,10 +300,10 @@
           }
         }
 
-        if(hoursRes <=0) {
+        // if(hoursRes <=0) {
 
-          $('#myCart').hide();
-        }
+        //   $('#myCart').hide();
+        // }
         
                oldUrl = payInfo['notifyURL'];
           payInfo['notifyURL']= "";

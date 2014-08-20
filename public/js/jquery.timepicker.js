@@ -1,5 +1,5 @@
 /************************
-jquery-timepicker v1.4.5
+jquery-timepicker v1.4.6
 http://jonthornton.github.com/jquery-timepicker/
 
 requires jQuery 1.7+
@@ -17,26 +17,6 @@ requires jQuery 1.7+
 }(function ($) {
 	var _baseDate = _generateBaseDate();
 	var _ONE_DAY = 86400;
-	var _defaults =	{
-		className: null,
-		minTime: null,
-		maxTime: null,
-		durationTime: null,
-		step: 30,
-		showDuration: false,
-		showOnFocus: true,
-		timeFormat: 'g:ia',
-		scrollDefault: null,
-		selectOnBlur: false,
-		disableTouchKeyboard: false,
-		forceRoundTime: false,
-		appendTo: 'body',
-		orientation: 'ltr',
-		disableTimeRanges: [],
-		closeOnWindowScroll: false,
-		typeaheadHighlight: true,
-		noneOption: false
-	};
 	var _lang = {
 		am: 'am',
 		pm: 'pm',
@@ -58,13 +38,13 @@ requires jQuery 1.7+
 
 				// pick up settings from data attributes
 				var attributeOptions = [];
-				for (var key in _defaults) {
+				for (var key in $.fn.timepicker.defaults) {
 					if (self.data(key))  {
 						attributeOptions[key] = self.data(key);
 					}
 				}
 
-				var settings = $.extend({}, _defaults, attributeOptions, options);
+				var settings = $.extend({}, $.fn.timepicker.defaults, attributeOptions, options);
 
 				if (settings.lang) {
 					_lang = $.extend(_lang, settings.lang);
@@ -993,7 +973,6 @@ requires jQuery 1.7+
 
 		var output = '';
 		var hour, code;
-
 		for (var i=0; i<format.length; i++) {
 
 			code = format.charAt(i);
@@ -1040,6 +1019,12 @@ requires jQuery 1.7+
 				case 's':
 					seconds = time.getSeconds();
 					output += (seconds > 9) ? seconds : '0'+seconds;
+					break;
+
+				case '\\':
+					// escape character; add the next character and skip ahead
+					i++;
+					output += format.charAt(i);
 					break;
 
 				default:
@@ -1115,5 +1100,26 @@ requires jQuery 1.7+
 		}
 		else if(typeof method === "object" || !method) { return methods.init.apply(this, arguments); }
 		else { $.error("Method "+ method + " does not exist on jQuery.timepicker"); }
+	};
+	// Global defaults
+	$.fn.timepicker.defaults = {
+		className: null,
+		minTime: null,
+		maxTime: null,
+		durationTime: null,
+		step: 30,
+		showDuration: false,
+		showOnFocus: true,
+		timeFormat: 'g:ia',
+		scrollDefault: null,
+		selectOnBlur: false,
+		disableTouchKeyboard: false,
+		forceRoundTime: false,
+		appendTo: 'body',
+		orientation: 'ltr',
+		disableTimeRanges: [],
+		closeOnWindowScroll: false,
+		typeaheadHighlight: true,
+		noneOption: false
 	};
 }));

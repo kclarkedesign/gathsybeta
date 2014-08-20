@@ -93,6 +93,7 @@
        
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
+         //$('#myCart').fadeIn();
 
            
          });
@@ -262,13 +263,6 @@
           setTimeout(function(){
           $('#retInfo').val(oldUrl + "?startTime="+ encodeURIComponent(startDate.toString())+"&endTime="+ encodeURIComponent(endDate.toString())+"&url="+window.location.href);
           }, 1500);
-
-
-
-          hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
-          $("#myCart").PayPalCart('remove', "hours");
-         $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
-            // $('#myCart').fadeIn();
 
 
        })

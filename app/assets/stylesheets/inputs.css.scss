@@ -128,13 +128,13 @@ border-right: 1px solid #ccc;
   border: 0;
   outline: 0;
 }
-input[type="submit"] {
-width: 100%;
-height: 50px;
-background: #1a9ce2;
-color: white;
-font-size: 15px;
-font-weight: bold;
+#myCart input[type="submit"] {
+  width: 100%;
+  height: 50px;
+  background: #1a9ce2;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
 }
 .label-offset-button {
   margin-left: 207px;

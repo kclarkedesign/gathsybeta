@@ -30,6 +30,7 @@ class SpacesController < ApplicationController
   end
 
    def edit
+     @user = User.find_by_id(current_user.id)
      @space = Space.find_by_id(params[:space_id])
      redirect_to(:back) unless @space.user_id == current_user.id
      render :edit

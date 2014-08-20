@@ -67,21 +67,35 @@
 
     <script>
         // initialize input widgets first
-        $('.time').timepicker({
+        $('#container .time').timepicker({
             'showDuration': true,
             'timeFormat': 'g:ia',
             'step': 60
 
         });
 
-        $('.date').datepicker({
+        $('#container .date').datepicker({
             'format': 'm/d/yyyy',
             'autoclose': true,
             'startDate': '0d'
         });
 
         // initialize datepair
-        $('#datepairExample').datepair();
+        var container = $('#container').datepair();
+
+         $('#container').on('rangeSelected', function(e){
+            milliseconds = $('#container').datepair('getTimeDiff');
+            console.log("milliseconds init: " + milliseconds);
+            hoursRes = parseFloat(milliseconds/3600000);
+           
+           
+      hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1]);
+       
+          $("#myCart").PayPalCart('remove', "hours");
+         $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
+
+           
+         });
     </script>
 
     <h4 class="sidebar-section-header">Guest count</h4>
@@ -254,7 +268,7 @@
           hourlyRate =parseFloat($('.price-data').html().split('/sup>')[1])
           $("#myCart").PayPalCart('remove', "hours");
          $("#myCart").PayPalCart('add', "hours", "hours of reservation", hoursRes, hourlyRate, 0.08);
-            $('#myCart').fadeIn();
+            // $('#myCart').fadeIn();
 
 
        })

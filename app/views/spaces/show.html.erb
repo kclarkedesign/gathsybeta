@@ -281,15 +281,15 @@
           startDate = new Date($('.start:nth(0)').val() + " " + startHour);
           endDate = new Date($('.end:nth(0)').val() + " " + endHour);
 
-          if (startDate < new Date()){
-            if(showingAlert==true){
-          alert("Please select a start time after now.");
-          showingAlert=false;
-          setTimeout(function(){
-            showingAlert=true;
-          },5000)
-          }
-        }
+        //   if (startDate < new Date()){
+        //     if(showingAlert==true){
+        //   alert("Please select a start time after now.");
+        //   showingAlert=false;
+        //   setTimeout(function(){
+        //     showingAlert=true;
+        //   },5000)
+        //   }
+        // }
       }
         catch(err){
           if(showingAlert==true){

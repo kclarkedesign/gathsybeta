@@ -285,6 +285,7 @@
             if(showingAlert==true){
           alert("Please select a start time after now.");
           showingAlert=false;
+          $("#myCart").hide();
           setTimeout(function(){
             showingAlert=true;
           },5000)
@@ -306,19 +307,20 @@
 
           hoursRes = parseFloat((endDate - startDate)/3600000);
 
-        //   if(hoursRes <=0){
-        //      if(showingAlert==true){
-        //   alert("Please select an end time after your start time");
-        //   showingAlert=false;
+          if(hoursRes <=0){
+             if(showingAlert==true){
+          alert("Please select an end time after your start time");
+          showingAlert=false;
+          $("#myCart").hide();
           
           
-        //   setTimeout(function(){
-        //     showingAlert=true;
-        //   },5000)
-        //     return;
+          setTimeout(function(){
+            showingAlert=true;
+          },5000)
+            return;
 
-        //   }
-        // }
+          }
+        }
         
                oldUrl = payInfo['notifyURL'];
           payInfo['notifyURL']= "";

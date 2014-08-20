@@ -20,7 +20,7 @@
 }*/
 
 .tab-box > .tab > label {
-  background: #eee;
+  background: #fff;
   padding: 10px 0 6px 0;
   border: 1px solid #ccc;
   margin-left: -1px;
@@ -41,7 +41,7 @@
   left: 0;
   background: white;
   padding: 0;
-  border: 1px solid #ccc;
+  border: none;
   width: 100%;
   height: auto;
   display: block;

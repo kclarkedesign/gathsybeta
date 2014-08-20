@@ -10,7 +10,7 @@ AirbnbClone::Application.routes.draw do
     end
   end
 
-  resources :spaces,   only: [:new, :create, :show, :update, :index] do
+  resources :spaces,   only: [:new, :create, :show, :update, :edit, :index] do
     resources :bookings, only: [:edit, :index]
   end
 

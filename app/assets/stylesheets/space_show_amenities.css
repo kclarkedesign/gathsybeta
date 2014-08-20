@@ -1,13 +1,12 @@
 .available-amenity, .unavailable-amenity {
   float: left;
-  width: 180px;
+  width: 170px;
   position: relative;
-  margin-left: 20px;
+  margin-left: 26px;
   margin-top: 7px;
   margin-bottom: 8px;
   font-size: 12px;
 }
-
 .available-amenity:before {
   background: url("green_check_red_cross.jpg");
   content: " ";

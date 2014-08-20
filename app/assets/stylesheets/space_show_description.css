@@ -5,14 +5,16 @@
 
 #description, #house-rules {
   font-size: 13px;
-  float: left;
+float: left;
+width: 45%;
+min-height: 80px;
 }
 
 .tab-data {
   float: right;
-  border: 1px solid #CCC;
+  border: none;
   border-collapse:collapse;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 tbody {
@@ -39,7 +41,7 @@ tr:nth-child(odd) {
   background: #EEE;
 }
 
-tr:first-child > .table-row-title {
+/*tr:first-child > .table-row-title {
   border-top-left-radius: 9px;
 }
 
@@ -53,4 +55,4 @@ tr:first-child > .table-row-data {
 
 tr:last-child > .table-row-data {
   border-bottom-right-radius: 9px;
-}
+}*/

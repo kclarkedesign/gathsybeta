@@ -1,6 +1,6 @@
 class SpacesController < ApplicationController
 
-  before_filter :require_current_user!, only: [:new, :create, :destroy]
+  before_filter :require_current_user!, only: [:new, :create, :update, :destroy]
 
   def index
 
@@ -31,6 +31,12 @@ class SpacesController < ApplicationController
 
   def new
     @space = Space.new
+  end
+
+  def update
+   @space = Space.find_by_id(params[:id])
+     @space.update(params)
+    redirect_to(:back)
   end
 
   def create

@@ -62,7 +62,7 @@ body {
 @media (max-width: 745px) {
   .main {
   background: white;
-  width: 97%;
+  width: 96%;
   margin: 20px auto;
   min-width: 10px;
   border-radius: 30px;

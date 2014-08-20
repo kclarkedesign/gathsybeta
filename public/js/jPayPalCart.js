@@ -120,7 +120,7 @@
             theform += '<tr>\r\n<td><a href="javascript:void(0)" onclick="$(\'#' + theDiv.id + '\').PayPalCart(\'remove\', \'' + theDiv.settings.cartItems[i]['code'] + '\');">x</a>\r\n';
             theform += '<input type="hidden" name="item_number_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['code'] + '" />\r\n';
             theform += '<input type="hidden" name="item_name_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['description'] + '" />\r\n';
-            theform += '<input type="hidden" name="quantity_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['quantity'] + '" readonly />\r\n';
+            theform += '<input type="hidden" name="quantity_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['quantity'] + '" />\r\n';
             theform += '<input type="hidden" name="amount_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['value'] + '" />\r\n';
             theform += '<input type="hidden" name="tax_' + (i + 1).toString() + '" value="' + theDiv.settings.cartItems[i]['tax'] + '" />\r\n';
             theform += '</td>\r\n';

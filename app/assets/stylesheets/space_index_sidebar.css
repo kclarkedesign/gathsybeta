@@ -7,9 +7,9 @@ h4.sidebar-section-header {
 }
 
 h4.sidebar-section-header:first-child {
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-top: 1px solid #CCC;
+  /*border-top-right-radius: 4px;
+  border-top-left-radius: 4px;*/
+  border-bottom: 1px solid #CCC;
 }
 
 .sidebar-filters {

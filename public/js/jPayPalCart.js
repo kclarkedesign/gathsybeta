@@ -132,6 +132,7 @@
             }
             theform += '<td align="right">' + theDiv.settings.currencysign + parseFloat(theDiv.settings.cartItems[i]['value']).toFixed(2) + '</td></tr>\r\n';
         }
+        
         theform += '<tr class="PayPalCartTotals"><td colspan="3" align="left">Subtotal</td><td align="right">' + theDiv.settings.currencysign + parseFloat(overalltotal).toFixed(2) + '</td></tr>\r\n';
         theform += '<tr class="PayPalCartTotals"><td colspan="3" align="left">Vat</td><td align="right">' + theDiv.settings.currencysign + parseFloat(overalltax).toFixed(2) + '</td></tr>\r\n';
         theform += '<tr class="PayPalCartTotals"><td colspan="3" align="left">Total</td><td align="right">' + theDiv.settings.currencysign + parseFloat(overalltotal + overalltax).toFixed(2) + '</td></tr>\r\n';

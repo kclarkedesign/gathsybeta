@@ -14,11 +14,6 @@ class SpacesController < ApplicationController
 
     if request.xhr?
       render partial: "spaces/index/space_list", locals: {spaces: @spaces}
-
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json  { render :json => @spaces.to_json.html_safe }
-      end
     else
       render :index
     end
@@ -30,9 +25,7 @@ class SpacesController < ApplicationController
   end
 
    def edit
-     @user = User.find_by_id(current_user.id)
      @space = Space.find_by_id(params[:space_id])
-     redirect_to(:back) unless @space.user_id == current_user.id
      render :edit
    end
 
